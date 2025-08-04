@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The SkillVerse | Learning Paths</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <section id="main-hub-view">
+        <div class="main-hub-content">
+            <header>
+                <h1 class="main-hub-title">Choose Your Learning Path</h1>
+                <p class="main-hub-subtitle">Select a domain to reveal specialized paths and curated resources.</p>
+            </header>
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="course-card" data-course="webdev">
+                                <img src="https://placehold.co/600x400/004e92/ffffff?text=Web+Development" alt="Web Development" class="course-image">
+                                <div class="course-content"><h3 class="card-title">Web Development</h3></div>
+                            </div>
+                            <div class="course-card" data-course="ai">
+                                <img src="https://placehold.co/600x400/1a0a3a/ffffff?text=Artificial+Intelligence" alt="Artificial Intelligence" class="course-image">
+                                <div class="course-content"><h3 class="card-title">Artificial Intelligence</h3></div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="slide">
+                        <div class="slide-content">
+                            <div class="course-card" data-course="ml">
+                                <img src="https://placehold.co/600x400/3d1a5a/ffffff?text=Machine+Learning" alt="Machine Learning" class="course-image">
+                                <div class="course-content"><h3 class="card-title">Machine Learning</h3></div>
+                            </div>
+                            <div class="course-card" data-course="cloud">
+                                <img src="https://placehold.co/600x400/4a0d66/ffffff?text=Cloud+Computing" alt="Cloud Computing" class="course-image">
+                                <div class="course-content"><h3 class="card-title">Cloud Computing</h3></div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="slide">
+                        <div class="slide-content">
+                             <div class="course-card" data-course="api">
+                                <img src="https://placehold.co/600x400/6a0dad/ffffff?text=API+Development" alt="API Development" class="course-image">
+                                <div class="course-content"><h3 class="card-title">API Development</h3></div>
+                            </div>
+                            <div class="course-card" data-course="dsa">
+                                <img src="https://placehold.co/600x400/000428/ffffff?text=DSA" alt="Data Structures & Algorithms" class="course-image">
+                                <div class="course-content"><h3 class="card-title">DSA</h3></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="course-card" data-course="github">
+                                <img src="https://placehold.co/600x400/171515/ffffff?text=Git+%26+GitHub" alt="Git & GitHub" class="course-image">
+                                <div class="course-content"><h3 class="card-title">Git & GitHub</h3></div>
+                            </div>
+                             <div class="course-card" style="cursor: default; opacity: 0.5;">
+                                <img src="https://placehold.co/600x400/02042b/888888?text=More+Coming+Soon" alt="Coming Soon" class="course-image">
+                                <div class="course-content"><h3 class="card-title" style="color: #aaaaaa;">More Coming Soon</h3></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-nav prev" id="prev-slide">←</button>
+                <button class="slider-nav next" id="next-slide">→</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="course-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button id="close-modal" class="modal-close-btn">×</button>
+            <h2 id="modal-title" class="text-3xl font-bold mb-6">Course Title</h2>
+            <div id="modal-subtopics" class="flex flex-wrap gap-4 mb-6"></div>
+            <div id="modal-resources" class="resources-container hidden">
+                <h3 class="text-2xl font-semibold mb-4">Recommended Resources</h3>
+                <div id="resource-links"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="project.js"></script>
+</body>
+</html>

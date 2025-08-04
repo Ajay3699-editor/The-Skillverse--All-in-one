@@ -1,0 +1,345 @@
+:root {
+    /* CORRECTED: Reverted colors to light/vibrant versions for visibility */
+    --primary-font: 'Cinzel', serif;
+    --primary-accent: #00aaff;
+    --primary-accent-dark: #0088cc;
+    --text-light: #f0f8ff; /* AliceBlue, a very light color */
+    --bg-dark-blue: #02042b;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: var(--primary-font);
+    background-color: var(--bg-dark-blue);
+    overflow: hidden;
+}
+
+/* --- Welcome View Styles --- */
+#welcome-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("interface.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.intro-container {
+    padding: 2rem 3rem;
+    text-align: center;
+    max-width: 900px;
+    width: 90%;
+}
+
+/* MODIFIED: Welcome Title is now a cartoon-style box */
+.welcome-title {
+    font-weight: 700;
+    font-size: clamp(2.5rem, 6vw, 3rem);
+    color: var(--text-light); /* Solid light color for text */
+    text-shadow: 0 0 8px rgba(0, 170, 255, 0.8); /* Simple glow */
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    
+    /* Box Styles */
+    background-color: rgba(2, 4, 43, 0.7); /* Semi-transparent background */
+    border: 3px solid var(--primary-accent);
+    box-shadow: 0 0 15px var(--primary-accent); /* Glow effect for the box */
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    display: inline-block; /* Makes the box fit the content */
+}
+
+/* MODIFIED: Welcome Subtitle is also a cartoon-style box */
+.welcome-subtitle {
+    font-weight: 400;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--text-light); /* Solid light color for text */
+    opacity: 0.9;
+    margin-top: 2rem; /* Increased space between boxes */
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    text-shadow: none; /* Removed old shadow */
+
+    /* Box Styles */
+    background-color: rgba(2, 4, 43, 0.7);
+    border: 2px solid var(--primary-accent);
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.7);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+}
+
+.enter-button {
+    font-weight: 700;
+    color: var(--text-light); 
+    border: 2px solid var(--primary-accent); /* Added border to match theme */
+    border-radius: 50px;
+    padding: 1rem 2.5rem;
+    margin-top: 3rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    background: linear-gradient(90deg, #4b0082, #004e92);
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.6); /* Enhanced glow */
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+.enter-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 170, 255, 0.8);
+}
+
+
+/* MODIFIED: --- New Cartoon Bounce Animation --- */
+@keyframes cartoonBounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.8);
+    }
+    80% {
+        transform: translateY(-10px) scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Initial state for all animated elements */
+.animate-fade-in-1,
+.animate-fade-in-2,
+.animate-fade-in-3 {
+    opacity: 0;
+}
+
+/* Staggered animation application using the new animation */
+.animate-fade-in-1 {
+    animation: cartoonBounceIn 1.5s ease-out 0.5s forwards;
+}
+.animate-fade-in-2 {
+    animation: cartoonBounceIn 1.5s ease-out 1.2s forwards;
+}
+.animate-fade-in-3 {
+    animation: cartoonBounceIn 1.5s ease-out 1.9s forwards;
+}
+
+/* --- Main Hub View Styles --- */
+#main-hub-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#main-hub-view::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url("Gemini_Generated_Image_ougozuougozuougo.png");
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -2;
+}
+#main-hub-view::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(2, 4, 43, 0.8);
+    z-index: -1;
+}
+#starfield {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+}
+.main-hub-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 1rem;
+}
+.main-hub-title {
+    font-weight: 800;
+    font-size: clamp(2rem, 6vw, 4rem);
+    color: var(--text-light); /* Uses the corrected light color */
+    text-shadow: 0 0 15px rgba(0, 170, 255, 0.4);
+    text-align: center;
+}
+.main-hub-subtitle {
+    font-weight: 400;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    color: var(--text-light); /* Uses the corrected light color */
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+/* --- Slider Styles (Unchanged) --- */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    opacity: 0.5;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.slide.active-slide {
+    opacity: 1;
+    transform: scale(1);
+}
+.slide-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+.slider-nav:hover:not(:disabled) {
+    background-color: rgba(0, 191, 255, 0.5);
+}
+.slider-nav:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+.slider-nav.prev {
+    left: -25px;
+}
+.slider-nav.next {
+    right: -25px;
+}
+
+/* --- Course Card Styles (Unchanged) --- */
+.course-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: var(--text-light);
+    position: relative;
+}
+.course-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-accent);
+}
+.course-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.course-content {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(2, 4, 43, 0.9), transparent);
+}
+.card-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+/* --- Modal Styles (Unchanged) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-content {
+    background-color: #0d1a2e;
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    padding: 2rem;
+}
+#modal-title {
+    font-weight: 800;
+    color: var(--primary-accent);
+}
+.modal-close-btn {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    background: none; border: none;
+    color: white; font-size: 2rem;
+    line-height: 1; cursor: pointer;
+}
+.subtopic-btn {
+    background: var(--primary-accent);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.subtopic-btn:hover {
+    background: var(--primary-accent-dark);
+    transform: scale(1.05);
+}
+.resources-container {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.resource-link {
+    display: block;
+    padding: 0.75rem;
+    color: var(--text-light);
+    background-color: rgba(255,255,255,0.05);
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+.resource-link:hover {
+    background-color: rgba(0, 170, 255, 0.1);
+    border-color: var(--primary-accent);
+}
+
+/* --- General Shared Styles (Unchanged) --- */
+.hidden {
+    display: none;
+}
