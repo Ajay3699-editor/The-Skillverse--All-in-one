@@ -6,7 +6,7 @@ The SkillVerse is your all-in-one launchpad for B.Tech success. It's a curated r
 
 ## 🎬 Project Demo
 
-![Live Demo](https://the-skillverse-all-in-one.vercel.app/)
+🔗 **Project Link:** [The SkillVerse](https://the-skillverse-all-in-one.vercel.app/)
 
 ![Interface page](images/ss%20front.png)
 ![Main page](images/ss1.png)
