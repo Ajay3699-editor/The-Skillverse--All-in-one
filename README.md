@@ -15,7 +15,7 @@ The SkillVerse is your all-in-one launchpad for B.Tech success. It's a curated r
 ![3 page](images/ss4.png)
 ![last one](images/ss5.png)
 
-![Project Demo](images/Untitled%20video%20-%20Made%20with%20Clipchamp%20(1).mp4)
+![Project Demo](images/Untitled%20video%20-%20Made%20with%20Clipchamp%20(2)%20(1).mp4)
 
 ---
 
