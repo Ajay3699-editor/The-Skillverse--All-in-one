@@ -6,7 +6,7 @@ The SkillVerse is your all-in-one launchpad for B.Tech success. It's a curated r
 
 ## 🎬 Project Demo
 
-*(Note: To make this work, you must first record a demo video, convert it to a GIF named `project-demo.gif`, and upload it to your repository.)*
+![Live Demo](https://the-skillverse-all-in-one.vercel.app/)
 
 ![Interface page](images/ss%20front.png)
 ![Main page](images/ss1.png)
@@ -15,7 +15,6 @@ The SkillVerse is your all-in-one launchpad for B.Tech success. It's a curated r
 ![3 page](images/ss4.png)
 ![last one](images/ss5.png)
 
-![Project Demo](images/Untitled%20video%20-%20Made%20with%20Clipchamp%20(2)%20(1).mp4)
 
 ---
 
